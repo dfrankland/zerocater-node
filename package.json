@@ -1,0 +1,31 @@
+{
+  "name": "zerocater",
+  "version": "1.0.0",
+  "description": "Node.js client for Zerocater.",
+  "main": "index.js",
+  "keywords": [
+    "zerocater",
+    "client",
+    "api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dfrankland/zerocater-node.git"
+  },
+  "author": "Dylan Frankland <dylan@frankland.io>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.7.4",
+    "babel-preset-node5": "^11.0.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.7.2",
+    "moment": "^2.13.0",
+    "node-fetch": "^1.5.1"
+  },
+  "babel": {
+    "presets": [
+      "node5",
+      "stage-0"
+    ]
+  }
+}
