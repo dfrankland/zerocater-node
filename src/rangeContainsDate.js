@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-const ranges = {
+const predefinedRanges = {
   month: () => ({
     start: moment().startOf('month'),
     end: moment().endOf('month'),
@@ -23,9 +23,29 @@ const ranges = {
   }),
 };
 
-const rangeContainsDate = (rangeKey, time) => {
-  const range = ranges[rangeKey]();
-  return moment.unix(time).isBetween(range.start, range.end);
+const getValidRange = range => {
+  if (typeof range === 'object') {
+    if (range.start && range.end) {
+      return range;
+    } else {
+      throw new Error('Date range is missing either a start or end time!');
+    }
+  } else {
+    const predefinedRange = predefinedRanges[range];
+    if (predefinedRange) {
+      return predefinedRange();
+    } else {
+      throw new Error(
+        'Specified predefined date range does not exist.\n' +
+        `Please choose one of: ${Object.keys(predefinedRanges).join(', ')}`
+      );
+    }
+  }
+};
+
+const rangeContainsDate = (range, time) => {
+  const { start, end } = getValidRange(range);
+  return moment.unix(time).isBetween(start, end);
 };
 
 export default rangeContainsDate;
