@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import fetch from 'node-fetch';
 import rangeContainsDate from './rangeContainsDate';
 
