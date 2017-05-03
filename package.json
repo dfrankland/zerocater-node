@@ -15,8 +15,8 @@
   "author": "Dylan Frankland <dylan@frankland.io>",
   "license": "MIT",
   "dependencies": {
-    "moment": "^2.13.0",
-    "node-fetch": "^1.5.1"
+    "moment": "^2.18.1",
+    "node-fetch": "^1.6.3"
   },
   "devDependencies": {
     "babel-cli": "^6.7.7",
