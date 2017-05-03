@@ -18,7 +18,7 @@ npm i -S zerocater
 ```js
 import ZeroCater from 'zerocater'; // ES6
 // OR
-var ZeroCater = require('zerocater').default; // ES5
+var ZeroCater = require('zerocater'); // ES5
 ```
 
 3.  Instantiate the class `Zerocater([ZeroCater shortcode])`
