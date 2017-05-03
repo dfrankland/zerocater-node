@@ -2,6 +2,9 @@
   "name": "zerocater",
   "version": "1.0.3",
   "description": "Node.js client for Zerocater.",
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
     "build": "rollup -c ./rollup.config.js",
     "prepublish": "npm run build"
@@ -19,7 +22,10 @@
     "type": "git",
     "url": "https://github.com/dfrankland/zerocater-node.git"
   },
+  "bugs": "https://github.com/dfrankland/zerocater-node/issues",
+  "homepage": "https://github.com/dfrankland/zerocater-node",
   "author": "Dylan Frankland <dylan@frankland.io>",
+  "contributors": [],
   "license": "MIT",
   "dependencies": {
     "moment": "^2.18.1",
