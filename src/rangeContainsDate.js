@@ -25,21 +25,17 @@ const predefinedRanges = {
 
 const getValidRange = range => {
   if (typeof range === 'object') {
-    if (range.start && range.end) {
-      return range;
-    } else {
-      throw new Error('Date range is missing either a start or end time!');
-    }
+    if (range.start && range.end) return range;
+
+    throw new Error('Date range is missing either a start or end time!');
   } else {
     const predefinedRange = predefinedRanges[range];
-    if (predefinedRange) {
-      return predefinedRange();
-    } else {
-      throw new Error(
-        'Specified predefined date range does not exist.\n' +
-        `Please choose one of: ${Object.keys(predefinedRanges).join(', ')}`
-      );
-    }
+    if (predefinedRange) return predefinedRange();
+
+    throw new Error(
+      'Specified predefined date range does not exist.\n' +
+      `Please choose one of: ${Object.keys(predefinedRanges).join(', ')}`,
+    );
   }
 };
 

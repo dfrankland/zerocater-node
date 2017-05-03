@@ -16,7 +16,8 @@ const Zerocater = token => ({
         if (!range) return allFilteredMeals.concat(nextMeal);
         if (rangeContainsDate(range, unixTime)) return allFilteredMeals.concat(nextMeal);
         return allFilteredMeals;
-      }, []
+      },
+      [],
     );
   },
 });
