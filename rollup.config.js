@@ -1,8 +1,11 @@
 import babel from 'rollup-plugin-babel';
 
 export default {
-  entry: './src/index.js',
-  format: 'cjs',
+  input: './src/index.js',
+  output: {
+    file: './dist/index.js',
+    format: 'cjs',
+  },
   external: ['node-fetch', 'moment'],
   plugins: [
     babel({
@@ -21,5 +24,4 @@ export default {
       babelrc: false,
     }),
   ],
-  dest: './dist/index.js',
 };
