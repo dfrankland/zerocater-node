@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "rollup -c ./rollup.config.js",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "main": "./dist/index.js",
   "files": [
@@ -29,12 +29,13 @@
   "license": "MIT",
   "dependencies": {
     "moment": "^2.18.1",
-    "node-fetch": "^1.6.3"
+    "node-fetch": "^2.2.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "babel-preset-env": "^1.4.0",
     "babel-preset-stage-0": "^6.24.1",
-    "rollup": "^0.41.6",
-    "rollup-plugin-babel": "^2.7.1"
+    "rollup": "^0.64.1",
+    "rollup-plugin-babel": "^3.0.7"
   }
 }
