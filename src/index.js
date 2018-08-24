@@ -4,7 +4,7 @@ import rangeContainsDate from './rangeContainsDate';
 
 const Zerocater = token => ({
   getMeals: async options => {
-    const response = await fetch(`https://api.zerocater.com/v3/companies/${token}/meals`);
+    const response = await fetch(`https://app.zerocater.com/api/v3/companies/${token}/meals`);
     const allMeals = await response.json();
     if (!options || !options.range) return allMeals;
     const range = options.range || false;
